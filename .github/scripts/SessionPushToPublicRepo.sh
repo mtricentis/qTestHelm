@@ -16,7 +16,7 @@ mkdir /home/runner/work/$GITHUB_USERNAME
 cd /home/runner/work/$GITHUB_USERNAME
 pwd
 apt-get update && apt-get install git
-apk add --no-cache git
+#apk add --no-cache git
 
 git config --global user.email "mtricentis@g.com"
 git config --global user.name "$GITHUB_USERNAME"
@@ -31,7 +31,7 @@ ls -ltr
 #Update Session Helm and app verison
 sed -i 's/\(^version:.*\)/version: '"$HELM_SESSION_VERSION"'/g' Charts/qtest-session/Chart.yaml
 sed -i 's/\(^appVersion:.*\)/appVersion: '"$SESSION_APP_VERSION"'/g' Charts/qtest-session/Chart.yaml
-
+git rm --cached .idea
 git add --all
 git commit --message "Update from $GITHUB_REPOSITORY"
 
