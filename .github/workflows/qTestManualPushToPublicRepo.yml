@@ -33,12 +33,11 @@ jobs:
       - name: push directory
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_GITHUB_TOKEN }}
-          LATEST_RELEASE: ${{ steps.latestrelease.outputs.releasetag }}
+          GITHUB_USERNAME: ${{ secrets.USERNAME }}
         run: |
           cwd=$(pwd)
           echo $cwd
           
           chmod 777 *
           chmod 777 ./.github/scripts/pushToPublicRepo.sh
-          ./.github/scripts/pushToPublicRepo.sh $cwd ${{ secrets.USERNAME }} ${{ github.event.inputs.branchName }} \ 
-                                                ${{ github.event.inputs.helmqTestVersion }} ${{ github.event.inputs.qtestAppVersion }}
+          ./.github/scripts/pushToPublicRepo.sh $cwd ${{ secrets.USERNAME }} ${{ github.event.inputs.branchName }} ${{ github.event.inputs.helmqTestVersion }} ${{ github.event.inputs.qtestAppVersion }}
