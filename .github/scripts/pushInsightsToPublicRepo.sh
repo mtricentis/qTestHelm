@@ -29,8 +29,8 @@ git checkout -b $GITHUB_REPO
 cp -r $FOLDER/* .
 ls -ltr
 #Update Insights Helm and app verison
-sed -i 's/\(.*version:.*\)/version: '"$HELM_INSIGHTS_VERSION"'/g' Charts/qtest-chart/Chart.yaml
-sed -i 's/\(.*appVersion:.*\)/appVersion: '"$INSIGHTS_APP_VERSION"'/g' Charts/qtest-chart/Chart.yaml
+sed -i 's/\(.*version:.*\)/version: '"$HELM_INSIGHTS_VERSION"'/g' Charts/qtest-insights/Chart.yaml
+sed -i 's/\(.*appVersion:.*\)/appVersion: '"$INSIGHTS_APP_VERSION"'/g' Charts/qtest-insights/Chart.yaml
 
 git add --all
 git commit --message "Update from $GITHUB_REPOSITORY"
