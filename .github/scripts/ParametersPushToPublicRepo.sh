@@ -29,7 +29,7 @@ git checkout -b $GITHUB_REPO
 cp -r $FOLDER/Charts/qtest-parameters/* Charts/qtest-parameters
 ls -ltr
 #Update Parameters Helm and app verison
-sed -i '0,/^\([[:space:]]*version: *\)/version: '"$HELM_PARAMETERS_VERSION"'/g' Charts/qtest-parameters/Chart.yaml
+sed -i '0/\(version:.*\)/version: '"$HELM_PARAMETERS_VERSION"'/g' Charts/qtest-parameters/Chart.yaml
 sed -i 's/\(.*appVersion:.*\)/appVersion: '"$PARAMETERS_APP_VERSION"'/g' Charts/qtest-parameters/Chart.yaml
 
 git add --all
