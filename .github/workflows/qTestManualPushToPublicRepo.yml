@@ -28,13 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: get latest release
-        id: latestrelease
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_GITHUB_TOKEN }}
-          GITHUB_USERNAME: ${{ secrets.USERNAME }}
-          #GITHUB_REPO: testHelm
-      - name: tagcheckout
+      - name: checkout
         uses: actions/checkout@v2
       - name: push directory
         env:
