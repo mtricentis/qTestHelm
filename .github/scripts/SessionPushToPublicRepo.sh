@@ -31,7 +31,7 @@ ls -ltr
 #Update Session Helm and app verison
 sed -i 's/\(^version:.*\)/version: '"$HELM_SESSION_VERSION"'/g' Charts/qtest-session/Chart.yaml
 sed -i 's/\(^appVersion:.*\)/appVersion: '"$SESSION_APP_VERSION"'/g' Charts/qtest-session/Chart.yaml
-git rm --cached .idea
+git rm --cached
 git add --all
 git commit --message "Update from $GITHUB_REPOSITORY"
 
