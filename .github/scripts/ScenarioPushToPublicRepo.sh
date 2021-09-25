@@ -29,8 +29,8 @@ git checkout -b $GITHUB_REPO
 cp -r $FOLDER/* .
 ls -ltr
 #Update Scenario Helm and app verison
-sed -i 's/\(.*version:.*\)/version: '"$HELM_SCENARIO_VERSION"'/g' Charts/qtest-scenario/Chart.yaml
-sed -i 's/\(.*appVersion:.*\)/appVersion: '"$SCENARIO_APP_VERSION"'/g' Charts/qtest-scenario/Chart.yaml
+sed -i 's/\(^version:.*\)/version: '"$HELM_SCENARIO_VERSION"'/g' Charts/qtest-scenario/Chart.yaml
+sed -i 's/\(^appVersion:.*\)/appVersion: '"$SCENARIO_APP_VERSION"'/g' Charts/qtest-scenario/Chart.yaml
 
 git add --all
 git commit --message "Update from $GITHUB_REPOSITORY"
