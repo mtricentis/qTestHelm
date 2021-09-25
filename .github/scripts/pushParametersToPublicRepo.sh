@@ -28,7 +28,7 @@ echo "After cd $CLONE_DIR"
 git checkout -b $GITHUB_REPO
 cp -r $FOLDER/* .
 ls -ltr
-#Update qtestManger Helm and app verison
+#Update Parameters Helm and app verison
 sed -i 's/\(.*version:.*\)/version: '"$HELM_PARAMETERS_VERSION"'/g' Charts/qtest-chart/Chart.yaml
 sed -i 's/\(.*appVersion:.*\)/appVersion: '"$PARAMETERS_APP_VERSION"'/g' Charts/qtest-chart/Chart.yaml
 
