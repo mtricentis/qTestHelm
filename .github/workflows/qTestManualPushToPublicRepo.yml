@@ -12,7 +12,7 @@ on:
         description: 'Please provide branch name that needs to be committed to public repo'
         default: newBranch
         required: true
-      helmqTestVersion:
+      qTestHelmVersion:
         description: 'Please provide Helm Chart Version'
         default: '1.0'
         required: true
@@ -40,4 +40,4 @@ jobs:
           
           chmod 777 *
           chmod 777 ./.github/scripts/pushToPublicRepo.sh
-          ./.github/scripts/pushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} ${{ github.event.inputs.helmqTestVersion }} ${{ github.event.inputs.qtestAppVersion }}
+          ./.github/scripts/pushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} ${{ github.event.inputs.qTestHelmVersion }} ${{ github.event.inputs.qtestAppVersion }}
