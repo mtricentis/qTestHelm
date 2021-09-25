@@ -16,7 +16,7 @@ mkdir /home/runner/work/$GITHUB_USERNAME
 cd /home/runner/work/$GITHUB_USERNAME
 pwd
 apt-get update && apt-get install git
-#apt-get add --no-cache git
+apt-get add --no-cache git
 
 git config --global user.email "mtricentis@g.com"
 git config --global user.name "$GITHUB_USERNAME"
