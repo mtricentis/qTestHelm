@@ -29,7 +29,7 @@ git checkout -b $GITHUB_REPO
 cp -r $FOLDER/Charts/qtest-launch/* Charts/qtest-launch
 ls -ltr
 #Update Launch Helm and app verison
-sed -i 's/\(.*version:.*\)/version: '"$HELM_LAUNCH_VERSION"'/g' Charts/qtest-launch/Chart.yaml
+sed -i 's/\(^version:.*\)/version: '"$HELM_LAUNCH_VERSION"'/g' Charts/qtest-launch/Chart.yaml
 sed -i 's/\(.*appVersion:.*\)/appVersion: '"$LAUNCH_APP_VERSION"'/g' Charts/qtest-launch/Chart.yaml
 
 git add --all
