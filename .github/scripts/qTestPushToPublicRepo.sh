@@ -26,7 +26,7 @@ echo 'check current directory after Clone'
 cd $CLONE_DIR
 echo "After cd $CLONE_DIR"
 git checkout -b $GITHUB_REPO
-cp -r $FOLDER/* .
+cp -r $FOLDER/Charts/qtest-chart/* Charts/qtest-chart
 ls -ltr
 #Update qtestManger Helm and app verison
 sed -i 's/\(^version:.*\)/version: '"$HELM_QTEST_VERSION"'/g' Charts/qtest-chart/Chart.yaml
