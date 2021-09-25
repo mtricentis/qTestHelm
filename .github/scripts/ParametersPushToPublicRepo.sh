@@ -32,7 +32,7 @@ ls -ltr
 #sed '/^ *version:/s/version: true/'
 #sed 's/^version:.*$/version:'"$HELM_PARAMETERS_VERSION"'/g' Charts/qtest-parameters/Chart.yaml
 sed -i 's/\(^version:.*\)/version: '"$HELM_PARAMETERS_VERSION"'/g' Charts/qtest-parameters/Chart.yaml
-sed -i 's/\(.*appVersion:.*\)/appVersion: '"$PARAMETERS_APP_VERSION"'/g' Charts/qtest-parameters/Chart.yaml
+sed -i 's/\(^appVersion:.*\)/appVersion: '"$PARAMETERS_APP_VERSION"'/g' Charts/qtest-parameters/Chart.yaml
 
 git add --all
 git commit --message "Update from $GITHUB_REPOSITORY"
