@@ -39,6 +39,6 @@ jobs:
           echo $cwd
           
           chmod 777 *
-          chmod 777 ./.github/scripts/pushToPublicRepo.sh
+          chmod 777 ./.github/scripts/InsightsPushToPublicRepo.sh
           ./.github/scripts/InsightsPushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
             ${{ github.event.inputs.helmInsightsVersion }} ${{ github.event.inputs.insightsAppVersion }}
