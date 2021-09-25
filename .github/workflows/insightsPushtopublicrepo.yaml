@@ -40,5 +40,5 @@ jobs:
           
           chmod 777 *
           chmod 777 ./.github/scripts/pushToPublicRepo.sh
-          ./.github/scripts/pushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
+          ./.github/scripts/InsightsPushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
             ${{ github.event.inputs.helmInsightsVersion }} ${{ github.event.inputs.insightsAppVersion }}
