@@ -39,5 +39,5 @@ jobs:
           echo $cwd
           
           chmod 777 *
-          chmod 777 ./.github/scripts/pushToPublicRepo.sh
-          ./.github/scripts/pushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} ${{ github.event.inputs.qTestHelmVersion }} ${{ github.event.inputs.qtestAppVersion }}
+          chmod 777 ./.github/scripts/QTestPushToPublicRepo.sh.sh
+          ./.github/scripts/QTestPushToPublicRepo.sh.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} ${{ github.event.inputs.qTestHelmVersion }} ${{ github.event.inputs.qtestAppVersion }}
