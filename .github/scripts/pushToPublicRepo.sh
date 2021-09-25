@@ -30,7 +30,7 @@ cp -r $FOLDER/* .
 ls -ltr
 #Update qtestManger Helm and app verison
 sed -i 's/\(.*version:.*\)/version: '"$HELM_QTEST_VERSION"'/g' Charts/qtest-chart/Chart.yaml
-sed -i 's/\(.*appVersion:.*\)/appVersion: '"$QTEST_MGR_VERSION"'/g' Charts/qtest-chart/Chart.yaml
+sed -i 's/\(.*appVersion:.*\)/appVersion: '"$QTEST_MGR_APP_VERSION"'/g' Charts/qtest-chart/Chart.yaml
 
 git add --all
 git commit --message "Update from $GITHUB_REPOSITORY"
