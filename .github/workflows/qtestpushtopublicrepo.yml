@@ -24,7 +24,7 @@ jobs:
           #GITHUB_REPO: testHelm
         run: |
         
-          echo "::set-output name=releasetag::$(curl -s https://api.github.com/repos/mtricentis/testHelm/releases/latest | jq '.tag_name' | sed 's/\"//g')"
+          echo "::set-output name=releasetag::$(curl -s https://api.github.com/repos/mtricentis/qtesthelm/releases/latest | jq '.tag_name' | sed 's/\"//g')"
       - name: confirm release tag
         run: |
         
