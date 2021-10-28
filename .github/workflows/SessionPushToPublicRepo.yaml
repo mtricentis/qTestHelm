@@ -41,4 +41,4 @@ jobs:
           chmod 777 *
           chmod 777 ./.github/scripts/SessionPushToPublicRepo.sh
           ./.github/scripts/SessionPushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
-            ${{ github.event.inputs.sessionHelmVersion }} ${{ github.event.inputs.sessionAppVersion }}
+            ${{ github.event.inputs.sessionHelmVersion }} ${{ github.event.inputs.sessionAppVersion }} qtest_public qtest-session
