@@ -41,4 +41,4 @@ jobs:
           chmod 777 *
           chmod 777 ./.github/scripts/InsightsPushToPublicRepo.sh
           ./.github/scripts/InsightsPushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
-            ${{ github.event.inputs.insightsHelmVersion }} ${{ github.event.inputs.insightsAppVersion }}
+            ${{ github.event.inputs.insightsHelmVersion }} ${{ github.event.inputs.insightsAppVersion }} qtest-public qtest-insights
