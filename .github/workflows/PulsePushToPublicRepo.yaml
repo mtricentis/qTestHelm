@@ -34,7 +34,7 @@ jobs:
       - name: push directory
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_GITHUB_TOKEN }}
-          GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          GITHUB_USERNAME: ${{ secrets.PUBLIC_REPO_USERNAME }}
         run: |
           cwd=$(pwd)
           echo $cwd
@@ -42,4 +42,4 @@ jobs:
           chmod 777 *
           chmod 777 ./.github/scripts/PulsePushToPublicRepo.sh
           ./.github/scripts/PulsePushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
-            ${{ github.event.inputs.pulseHelmVersion }} ${{ github.event.inputs.pulseAppVersion }}
+            ${{ github.event.inputs.pulseHelmVersion }} ${{ github.event.inputs.pulseAppVersion }} qtest-public qtest-pulse
