@@ -41,4 +41,4 @@ jobs:
           chmod 777 *
           chmod 777 ./.github/scripts/ParametersPushToPublicRepo.sh
           ./.github/scripts/ParametersPushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
-            ${{ github.event.inputs.parametersHelmVersion }} ${{ github.event.inputs.parametersAppVersion }}
+            ${{ github.event.inputs.parametersHelmVersion }} ${{ github.event.inputs.parametersAppVersion }} qtest-public qtest-parameters
