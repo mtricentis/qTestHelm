@@ -40,4 +40,4 @@ jobs:
           chmod 777 *
           chmod 777 ./.github/scripts/ScenarioPushToPublicRepo.sh
           ./.github/scripts/ScenarioPushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
-            ${{ github.event.inputs.scenarioHelmVersion }} ${{ github.event.inputs.scenarioAppVersion }}
+            ${{ github.event.inputs.scenarioHelmVersion }} ${{ github.event.inputs.scenarioAppVersion }} qtest-public qtest-scenario
