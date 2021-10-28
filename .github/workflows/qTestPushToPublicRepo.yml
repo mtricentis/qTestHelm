@@ -41,4 +41,4 @@ jobs:
           chmod 777 *
           chmod 777 ./.github/scripts/qTestPushToPublicRepo.sh
           ./.github/scripts/qTestPushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
-           ${{ github.event.inputs.qTestHelmVersion }} ${{ github.event.inputs.qtestAppVersion }} qtest_public qtest-mgr
+           ${{ github.event.inputs.qTestHelmVersion }} ${{ github.event.inputs.qtestAppVersion }} qtest_public qtest-chart
