@@ -42,4 +42,4 @@ jobs:
           chmod 777 *
           chmod 777 ./.github/scripts/LaunchPushToPublicRepo.sh
           ./.github/scripts/LaunchPushToPublicRepo.sh $cwd ${{ env.GITHUB_USERNAME }}  ${{ github.event.inputs.branchName }} \
-            ${{ github.event.inputs.launchHelmVersion }} ${{ github.event.inputs.launchAppVersion }}
+            ${{ github.event.inputs.launchHelmVersion }} ${{ github.event.inputs.launchAppVersion }} qtest-public qtest-launch
