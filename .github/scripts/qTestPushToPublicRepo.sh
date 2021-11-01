@@ -37,8 +37,8 @@ ls -ltr
 sed -i 's/\(^version:.*\)/version: '"$HELM_QTEST_VERSION"'/g' Charts/$APPLICATION_NAME/Chart.yaml
 sed -i 's/\(^appVersion:.*\)/appVersion: '"$QTEST_MGR_APP_VERSION"'/g' Charts/$APPLICATION_NAME/Chart.yaml
 #yq -help
-
-yq -i e '.image.tag = '"$QTEST_MGR_APP_VERSION"'' Charts/$APPLICATION_NAME/values.yaml
+appversion="$QTEST_MGR_APP_VERSION" yq -i eval '.image.tag = env(appversion)' Charts/$APPLICATION_NAME/values.yaml
+#yq -i e '.image.tag = '"$QTEST_MGR_APP_VERSION"'' Charts/$APPLICATION_NAME/values.yaml
 
 #sed -i '/^image:/{n;s/tag:.*/tag: '"$QTEST_MGR_APP_VERSION"'/g}' Charts/$APPLICATION_NAME/values.yaml
 git add --all
