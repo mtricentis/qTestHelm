@@ -36,7 +36,7 @@ ls -ltr
 #Update qtestManger Helm and app verison
 sed -i 's/\(^version:.*\)/version: '"$HELM_QTEST_VERSION"'/g' Charts/$APPLICATION_NAME/Chart.yaml
 sed -i 's/\(^appVersion:.*\)/appVersion: '"$QTEST_MGR_APP_VERSION"'/g' Charts/$APPLICATION_NAME/Chart.yaml
-yq e '.image.tag = "$APP_VERSION"'
+yq e '.image.tag = "$APP_VERSION"' Charts/$APPLICATION_NAME/values.yaml
 
 #sed -i '/^image:/{n;s/tag:.*/tag: '"$APP_VERSION"'/g}' Charts/$APPLICATION_NAME/values.yaml
 git add --all
