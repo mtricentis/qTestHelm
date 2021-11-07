@@ -11,6 +11,10 @@ QTEST_MGR_APP_VERSION="$5"
 PUBLIC_REPO="$6"
 APPLICATION_NAME="$7"
 
+if [ $APPLICATION_NAME == "qtest-chart" ]
+then 
+  echo " I am in If condition - $$$$$$ "
+fi
 CLONE_DIR=output_clone
 echo 'check current directory'
 #make directory
