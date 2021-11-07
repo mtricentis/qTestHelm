@@ -11,9 +11,12 @@ QTEST_MGR_APP_VERSION="$5"
 PUBLIC_REPO="$6"
 APPLICATION_NAME="$7"
 
-if [ "$APPLICATION_NAME" = "qtest-chart" ];
+if [ "$APPLICATION_NAME" = "qtest-chart1" ];
 then 
   echo " I am in If condition - $$$$$$ "
+elif [ "$APPLICATION_NAME" = "qtest-chart" ];
+then 
+echo " ELSE IF CONDITION -$HELLO RA "
 fi
 CLONE_DIR=output_clone
 echo 'check current directory'
